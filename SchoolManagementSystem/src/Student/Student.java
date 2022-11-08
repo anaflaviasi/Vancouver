@@ -11,6 +11,7 @@ public class Student {
     Scanner sc = new Scanner(System.in);
     String function;
     String field;
+    String answer;
 
  // Default Constructor
     public Student(){
@@ -87,6 +88,13 @@ public class Student {
             name = sc.nextLine();
             System.out.println("Update the Student program: ");
             program = sc.nextLine();
+    } 
+
+    public void deleteStudent(String answer){
+        System.out.println("Do you want to permanently delete this student from the system?");
+        System.out.println(" Say 'YES' or 'NO'");
+        answer = sc.nextLine();
+        return;
     } 
 
     @Override
