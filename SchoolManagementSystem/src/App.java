@@ -119,10 +119,10 @@ public class App {
                         } finally {
                             for(int i = 0; i < listStudent.size(); i++){
                                 if (listStudent.get(i).getId() == student1.getId()){
-                                    oldUpdListStudent.add(listStudent.get(i));
-                                    oldUpdListStudent.get(i).setId(listStudent.get(i).getId());
-                                    oldUpdListStudent.get(i).setName(listStudent.get(i).getName());
-                                    oldUpdListStudent.get(i).setProgram(listStudent.get(i).getProgram());
+                                    Student prevStudent = new Student(listStudent.get(i).getId(), 
+                                                                      listStudent.get(i).getName(),
+                                                                      listStudent.get(i).getProgram());
+                                    oldUpdListStudent.add(prevStudent);
                                     student1.updateStudent();
                                     listStudent.get(i).setName(student1.getName());
                                     listStudent.get(i).setProgram(student1.getProgram());
